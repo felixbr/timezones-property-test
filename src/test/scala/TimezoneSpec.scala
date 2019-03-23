@@ -33,7 +33,7 @@ class TimezoneSpec extends WordSpec with MustMatchers with PropertyChecks {
 
   val genZoneId: Gen[ZoneId] = Gen.oneOf(availableTimeZones)
 
-  "Available jav.time timezones must be symmetrical in ISO8601 formatting/parsing" must {
+  "Available java.time timezones" must {
     "be symmetrical" when {
       "formatting/parsing as ISO8601" in {
         forAll(genZoneId) { timezone =>
